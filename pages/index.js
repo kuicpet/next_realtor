@@ -4,7 +4,7 @@ import { baseUrl, fetchApi } from '../utils/fetchApi'
 import Property from '../components/Property'
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
-  console.log(propertiesForRent, propertiesForSale)
+  // console.log(propertiesForRent, propertiesForSale)
   return (
     <Box>
       <Banner

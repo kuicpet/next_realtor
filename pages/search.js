@@ -30,8 +30,8 @@ const Search = ({ properties }) => {
         <Icon paddingLeft='2' w='7' as={BsFilter} />
       </Flex>
       {searchFilters && <SearchFilters />}
-      <Text fontSize='2xl' p='4' fontWeight='bold'>
-        properties {router.query.purpose}
+      <Text fontSize='2xl' p='4'>
+        Properties {router.query.purpose}
       </Text>
       <Flex flexWrap='wrap'>
         {properties.map((property) => (
@@ -70,13 +70,13 @@ export async function getServerSideProps({ query }) {
   const locationExternalIDs = query.locationExternalIDs || '5002'
   const categoryExternalID = query.categoryExternalID || '4'
 
-  
-  const data = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
+  const data  = await fetchApi(
+    `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`
+  )
 
   return {
     props: {
       properties: data?.hits,
     },
-  };
+  }
 }
-

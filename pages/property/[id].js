@@ -16,7 +16,6 @@ const PropertyDetails = ({
     area,
     agency,
     isVerified,
-    externalID,
     description,
     type,
     purpose,
@@ -108,7 +107,6 @@ const PropertyDetails = ({
             <Text fontSize='2xl' fontWeight='black' marginTop='5'> Amenities</Text>
           )}
           <Flex flexWrap='wrap'>
-            
             {amenities.map((item) =>
               item.amenities.map((amenity) => (
                 <Text

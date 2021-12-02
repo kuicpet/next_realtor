@@ -5,7 +5,7 @@ import { Flex, Text, Box, Icon } from '@chakra-ui/react'
 import { BsFilter } from 'react-icons/bs'
 import SearchFilters from '../components/SearchFilters'
 import Property from '../components/Property'
-import noResult from '../assets/images/noresult.jpg'
+import noResult from '../assets/images/noResult.jpg'
 import { baseUrl, fetchApi } from '../utils/fetchApi'
 
 const Search = ({ properties }) => {

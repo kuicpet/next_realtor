@@ -1,5 +1,6 @@
 import React from 'react'
 import Link  from 'next/link'
+import Image from 'next/image'
 import {
   Menu,
   MenuButton,
@@ -16,7 +17,9 @@ import { FiKey } from 'react-icons/fi'
 const Navbar = () => (
   <Flex p='2' borderBottom='1px' borderColor='gray.100'>
     <Box fontSize='3xl' color='black.400'>
-      <Link href='/'>Next-Realtor</Link>
+      <Link href='/' passHref>
+        <Image src='/images/air_logo.png' alt='' width='50%' height='50%' />
+      </Link>
     </Box>
     <Spacer />
     <Box>

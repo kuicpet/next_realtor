@@ -104,7 +104,10 @@ const PropertyDetails = ({
         </Flex>
         <Box>
           {amenities.length && (
-            <Text fontSize='2xl' fontWeight='black' marginTop='5'> Amenities</Text>
+            <Text fontSize='2xl' fontWeight='black' marginTop='5'>
+              {' '}
+              Amenities
+            </Text>
           )}
           <Flex flexWrap='wrap'>
             {amenities.map((item) =>
@@ -117,9 +120,8 @@ const PropertyDetails = ({
                   p='2'
                   bg='gray.200'
                   m='1'
-                  borderRadius='5'
+                  borderRadius='6'
                 >
-                 
                   {amenity.text}
                 </Text>
               ))

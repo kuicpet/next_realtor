@@ -15,7 +15,7 @@ import { FcHome, FcAbout, FcMenu } from 'react-icons/fc'
 import { BsSearch } from 'react-icons/bs'
 import { FiKey } from 'react-icons/fi'
 const Navbar = () => (
-  <Flex p='2' borderBottom='1px' borderColor='gray.100'>
+  <Flex p='2' borderBottom='1px' borderColor='gray.200'>
     <Box fontSize='3xl' color='black.400'>
       <Link href='/' passHref>
         <Image src='/images/air_logo.png' alt='' width='50%' height='50%' />

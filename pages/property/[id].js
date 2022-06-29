@@ -1,4 +1,4 @@
-import { Flex, Box, Spacer, Text, Avatar } from '@chakra-ui/react'
+import { Flex, Box, Spacer,useMediaQuery, Text, Avatar } from '@chakra-ui/react'
 import { FaBed, FaBath } from 'react-icons/fa'
 import millify from 'millify'
 import { BsGridFill } from 'react-icons/bs'
@@ -65,7 +65,7 @@ const PropertyDetails = ({
           </Text>
         </Box>
         <Flex
-          flexWrap='wrap'
+          flexWrap={{base: 'nowrap', md: 'wrap', lg: 'nowrap'}}
           textTransform='uppercase'
           justifyContent='space-between'
         >
@@ -76,8 +76,9 @@ const PropertyDetails = ({
             borderColor='gray.100'
             p='3'
           >
-            <Text>Type</Text>
-            <Text fontWeight='bold'>{type}</Text>
+            <Text>
+              Type<Text fontWeight='bold'>{type}</Text>
+            </Text>
           </Flex>
           <Flex
             justifyContent='space-between'
@@ -86,8 +87,9 @@ const PropertyDetails = ({
             borderColor='gray.100'
             p='3'
           >
-            <Text>Purpose</Text>
-            <Text fontWeight='bold'>{purpose}</Text>
+            <Text>
+              Purpose<Text fontWeight='bold'>{purpose}</Text>
+            </Text>
           </Flex>
           {furnishingStatus && (
             <Flex
@@ -97,8 +99,10 @@ const PropertyDetails = ({
               borderColor='gray.100'
               p='3'
             >
-              <Text>Furnishing Status</Text>
-              <Text fontWeight='bold'>{furnishingStatus}</Text>
+              <Text>
+                Furnishing Status
+                <Text fontWeight='bold'>{furnishingStatus}</Text>
+              </Text>
             </Flex>
           )}
         </Flex>
@@ -115,12 +119,13 @@ const PropertyDetails = ({
                 <Text
                   key={amenity.text}
                   fontWeight='bold'
-                  color='blue.400'
+                  color='white'
                   fontSize='l'
-                  p='2'
-                  bg='gray.200'
+                  px='5'
+                  py='1.5'
+                  bg='black'
                   m='1'
-                  borderRadius='6'
+                  borderRadius='50'
                 >
                   {amenity.text}
                 </Text>

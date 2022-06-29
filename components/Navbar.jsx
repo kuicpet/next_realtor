@@ -1,5 +1,5 @@
 import React from 'react'
-import Link  from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
 import {
   Menu,
@@ -15,7 +15,14 @@ import { FcHome, FcAbout, FcMenu } from 'react-icons/fc'
 import { BsSearch } from 'react-icons/bs'
 import { FiKey } from 'react-icons/fi'
 const Navbar = () => (
-  <Flex p='2' borderBottom='1px' borderColor='gray.200'>
+  <Flex
+    p='2'
+    borderBottom='1px'
+    borderColor='gray.200'
+    zIndex='2'
+    width='100%'
+    bg='white'
+  >
     <Box fontSize='3xl' color='black.400'>
       <Link href='/' passHref>
         <Image src='/images/air_logo.png' alt='' width='50%' height='50%' />

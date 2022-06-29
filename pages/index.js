@@ -6,7 +6,7 @@ import Property from '../components/Property'
 export default function Home({ propertiesForSale, propertiesForRent }) {
   // console.log(propertiesForRent, propertiesForSale)
   return (
-    <Box>
+    <Box mt='7em'>
       <Banner
         purpose='RENT A HOME'
         title1='Rental Homes for'
